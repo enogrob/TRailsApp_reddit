@@ -43,4 +43,8 @@ $ git init
 $ git status
 $ echo .idea >> .gitignore
 $ git add .
+$ git commit -m "First Commit"
+$ git create TRailsApp_reddit
+$ git push origin master
+$ git browse .
 ```
