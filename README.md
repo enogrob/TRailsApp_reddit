@@ -83,6 +83,8 @@ $ git add .
 $ git commit -am "Generate Link Scaffold"
 $ git checkout master
 $ git merge link_scaffold
+$ git push
+$ git browse .
 ```
 
 
