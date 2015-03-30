@@ -48,3 +48,41 @@ $ git create TRailsApp_reddit
 $ git push origin master
 $ git browse .
 ```
+
+### Link Submissions
+To have the ability to submit a link, we are going to generate a scaffold for our Links. Lets do that now. First lets create a new branch in Git.
+
+```bash
+$ git checkout -b link_scaffold
+```
+
+Then lets generate the Link scaffold:
+
+```bash
+$ rails generate scaffold Link title:string url:string
+```
+
+Now we need to migrate our database… So run the following:
+
+```bash
+rake db:migrate
+```
+
+Now we can visit <http://localhost:3000/links>, and you can see we have the ability to now add a new link, as well as edit & destroy the links. Generating the scaffold creating a bunch of files for us, including our model, view and controller files, as well as edited our routes. Which gives us the ability to add / view / edit / destroy links.
+Everything is looking good so far, so lets commit & merge what we just did.
+
+```bash
+rails server
+```
+
+Everything is looking good so far, so lets commit & merge what we just did.
+
+```bash
+$ git status
+$ git add .
+$ git commit -am "Generate Link Scaffold"
+$ git checkout master
+$ git merge link_scaffold
+```
+
+
